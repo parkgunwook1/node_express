@@ -28,7 +28,7 @@
           <div class="collapse navbar-collapse" id="navPrimaryContent">
               <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="index.html" style="color:white">Home</a>
+                  <router-link class="nav-link " style="color:white" to="/" >Home</router-link>
                 </li>
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:white">
@@ -40,13 +40,13 @@
                   </ul>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="page.html" style="color:white">BEST</a>
+                  <router-link class="nav-link active" style="color:white" to="/">List</router-link>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="page.html" style="color:white">NEW</a>
+                  <router-link class="nav-link" to="/detail" style="color:white">Item-Detail</router-link>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="page.html" style="color:white">OUTER</a>
+                  <router-link class="nav-link" to="/sales" style="color:white">Item-Register</router-link>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="page.html" style="color:white">SHITRS</a>
@@ -94,44 +94,48 @@
               </div>
             </div>
         </div>
-        
       </nav>
-
     </header>
-    <!-- <div class="main-logo">
-      <img src="https://img.freepik.com/premium-vector/company-logo-design-ideas-vector-free-vector_536813-247.jpg?w=1380" class="rounded mx-auto d-block" alt="" style="height: 150px;">
-    </div> -->
-          <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="#">FPP</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <router-link class="nav-link " to="/">홈</router-link>
-                  </li>
-                  <li class="nav-item">
-                    <router-link class="nav-link active" to="/">제품리스트</router-link>
-                  </li>
-                  <li class="nav-item">
-                    <router-link class="nav-link" to="/detail">제품상세페이지</router-link>
-                  </li>
-                  <li v-if="user.email!=undefined" class="nav-item">
-                    <router-link class="nav-link" to="/sales">제품등록페이지</router-link>
-                  </li>
-                  <li v-if="user.email==undefined"><button class="btn btn-danger" type="button" @click="kakaoLogin">로그인</button></li>
-                  <li v-else><button class="btn btn-danger" type="button" @click="kakaoLogout">로그아웃</button></li>
-                 </ul>
-                <form class="d-flex">
-                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                  <button class="btn btn-outline-success" type="submit">Search</button>
-                
-                </form>
-              </div>
-            </div>
-          </nav> -->
+    
+    
+  <!-- <section id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F996333405A8280FC23" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>First slide label</h5>
+          <p>Some representative placeholder content for the first slide.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F9962DE405A8280FD23" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Second slide label</h5>
+          <p>Some representative placeholder content for the second slide.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F99BE8A405A8280FD19" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Third slide label</h5>
+          <p>Some representative placeholder content for the third slide.</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </section> -->
   <router-view/>
   <footer class="mt-5 py-5 bg-dark">
             <div class="row">
@@ -288,6 +292,19 @@ nav a.router-link-exact-active {
   font-family: 'MICEGothic Bold';
 }
 
+/* 슬라이드  */
+.carousel {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+  margin-right: 2rem;
+  margin-left: 2rem;
+  border-radius: 1rem;
+}
+
+.carousel .carousel-inner {
+  border-radius: 1rem;
+  box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+}
 
 
 

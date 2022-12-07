@@ -2,13 +2,14 @@
   <div>
     <header id="header" class="">
       <section id="navTop" class="nav-top py-2 d-none d-md-block">
-        <div class="container">
+        <div class="container1">
           <div class="row align-items-center justify-content-center">
             <div class="col-4"></div>
             <div class="col-4 logo">
-              <img src="https://img.freepik.com/premium-vector/company-logo-design-ideas-vector-free-vector_536813-247.jpg?w=1380" class="rounded mx-auto d-block" alt="" style="height: 150px;">
+              <!-- <img src="https://img.freepik.com/premium-vector/company-logo-design-ideas-vector-free-vector_536813-247.jpg?w=1380" class="rounded mx-auto d-block" alt="" style="height: 150px;"> -->
+              <img :src="require(`@/assets/company-logo.jpg`)" class="rounded mx-auto d-block" style="height: 250px">
             </div>
-            <div class="col-4 text-end socials">
+            <div class="col-1 text-end socials" style="margin-top: 10rem;">
               <div class="sign-container">
                 <li v-if="user.email==undefined"><a type="button" class="login" @click="kakaoLogin" style="color:black">Kakao-Login</a></li>
                 <!-- <li v-if="user.email==undefined"><button class="btn btn-danger" type="button" @click="kakaoLogin">로그인</button></li> -->
@@ -16,22 +17,24 @@
                 <li v-else><a type="button" class="logout" @click="kakaoLogout" style="color:black">Logout</a></li>
               </div>
             </div>
+            <div class="col-3"></div>
           </div>
         </div>
       </section>
 
-      <nav id="navPrimary" class="navbar navbar-expand-md bg-dark">
-        <div class="container-xxl">
+      <nav id="navPrimary" class="navbar navbar-expand-md">
+        <div class="container-fluid">
           <a class="navbar-brand d-block d-md-none" href="index.html">
+            <img src="./assets/company-logo.jpg" alt="vue logo" class="img-fluid" style="height: 100px">
             <!-- <img src="https://img.freepik.com/premium-vector/company-logo-design-ideas-vector-free-vector_536813-247.jpg?w=1380" class="rounded mx-auto d-block" alt="" style="height: 50px;"> -->
           </a>
           <div class="collapse navbar-collapse" id="navPrimaryContent">
               <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                  <router-link class="nav-link " style="color:white" to="/" >Home</router-link>
+                  <router-link class="nav-link active text-white" to="/home" >Home</router-link>
                 </li>
                 <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:white">
+                  <a class="nav-link dropdown-toggle text-white-50" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:white">
                     Intro
                   </a>
                   <ul class="dropdown-menu">
@@ -40,22 +43,22 @@
                   </ul>
                 </li>
                 <li class="nav-item">
-                  <router-link class="nav-link active" style="color:white" to="/">List</router-link>
+                  <router-link class="nav-link text-white-50" to="/">List</router-link>
                 </li>
                 <li class="nav-item">
-                  <router-link class="nav-link" to="/detail" style="color:white">Item-Detail</router-link>
+                  <router-link class="nav-link text-white-50" to="/detail">Item-Detail</router-link>
                 </li>
                 <li class="nav-item">
-                  <router-link class="nav-link" to="/sales" style="color:white">Item-Register</router-link>
+                  <router-link class="nav-link text-white-50" to="/sales">Item-Register</router-link>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="page.html" style="color:white">SHITRS</a>
+                  <a class="nav-link text-white-50" href="page.html">SHITRS</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="page.html" style="color:white">PANTS</a>
+                  <a class="nav-link text-white-50" href="page.html">PANTS</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="page.html" style="color:white">SALE</a>
+                  <a class="nav-link text-white-50" href="page.html">SALE</a>
                 </li>
                 <!-- <li class="nav-item">
                   <a class="nav-link btn btn-outline-secondary" href="#"><i class="fa fa-search"></i></a>
@@ -137,7 +140,7 @@
     </button>
   </section> -->
   <router-view/>
-  <footer class="mt-5 py-5 bg-dark">
+  <!-- <footer class="mt-5 py-5 bg-dark">
             <div class="row">
               <div class="col-12 col-md">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mb-2" role="img" viewBox="0 0 24 24"><title>Product</title><circle cx="12" cy="12" r="10"/><path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"/></svg>
@@ -182,7 +185,45 @@
                 </ul>
               </div>
             </div>
-          </footer>
+          </footer> -->
+  <footer id="footer" class="">
+    <div class="section-content">
+      <div class="container">
+        <div class="nav-footer">
+          <a href="page.html" class="link-light text-decoration-none fw-light">Privacy policy</a> |
+          <a href="page.html" class="link-light text-decoration-none fw-light">Terms of use</a> |
+          <a href="page.html" class="link-light text-decoration-none fw-light">Business hour</a>
+        </div>
+        <hr class="hr-white">
+        <div class="row align-items-center">
+          <div class="col-md-3 text-center mb-3 mb-md-0">
+            <!-- <img src="./assets/company-logo.jpg" alt="vue logo" class="img-fluid" width="200px"> -->
+          </div>
+          <div class="col-md-9 footer-informations">
+            <p><strong>F P P</strong> | CEO Name: Jin Young Ku | Business No: 000-00-00000 | TEL: 02-123-4567 <br>Address: 11-111 Jin-Young Jung-gu Seoul Korea <br></p>
+            <a href="tel:02-111-1111" class="mx-1 text-decoration-none social">
+              <img src="./assets/icon-phone.png" alt="vue logo" class="shadow-box" width="48px">
+            </a>
+            <a target="_blank" href="#" class="mx-1 text-decoration-none social">
+              <img src="./assets/icon-facebook.png" alt="vue logo" class="shadow-box" width="48px">
+            </a>
+            <a target="_blank" href="#" class="mx-1 text-decoration-none social">
+              <img src="./assets/icon-kakao-channel.png" alt="vue logo" class="shadow-box" width="48px">
+            </a>
+            <a target="_blank" href="#" class="mx-1 text-decoration-none social">
+              <img src="./assets/icon-twitter.png" alt="vue logo" class="shadow-box" width="48px">
+            </a>
+            <a target="_blank" href="#" class="mx-1 text-decoration-none social">
+              <img src="./assets/icon-youtube.png" alt="vue logo" class="shadow-box" width="48px">
+            </a>
+
+            <br>
+            <span class="copyright">FASHION WEB MAGAZIN / LIFE STYLE SELECT SHOP All rights Reserved. | Designed by <span class="text-warning">KJY</span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
           </div>
 </template>
 <script>
@@ -266,6 +307,16 @@ nav a.router-link-exact-active {
     font-weight: 700;
     font-style: normal;
 }
+@font-face {
+    font-family: 'GothicA1-Light';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2205@1.0/GothicA1-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+}
+
+.navbar {
+  background-color: black;
+}
 
 .login {
   font-family: 'LINESeedKR-Bd';
@@ -277,12 +328,12 @@ nav a.router-link-exact-active {
   font-size: 1.3rem;
 }
 
-.nav-link {
-  font-family: 'MICEGothic Bold';
-  font-size: 1rem;
+.nav-item:hover {
+  background-color: darkslateblue;
+  border-radius: 1rem;
 }
 
-.nav-link active {
+.dropdown-item {
   font-family: 'MICEGothic Bold';
   font-size: 1rem;
 }
@@ -304,6 +355,32 @@ nav a.router-link-exact-active {
 .carousel .carousel-inner {
   border-radius: 1rem;
   box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+}
+
+#footer {
+  background-color: grey;
+  color: #fff;
+}
+#footer .nav-footer a {
+  font-size: 1.1rem;
+  font-family: 'GothicA1-Light';
+}
+#footer .footer-informations p {
+  font-size: 1.1rem;
+  font-family: 'GothicA1-Light';
+}
+#footer .footer-informations .social {
+  margin-top: 0.75rem;
+  display: inline-block;
+}
+#footer .footer-informations .social img {
+  border-radius: 0.5rem;
+}
+#footer .footer-informations .copyright {
+  display: inline-block;
+  font-size: 0.9rem;
+  font-family: 'GothicA1-Light';
+  margin-top: 1rem;
 }
 
 

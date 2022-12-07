@@ -15,7 +15,6 @@ module.exports = {
       '^/download': {
         target,
         changeOrigin: true,
-
       }
     }
   }

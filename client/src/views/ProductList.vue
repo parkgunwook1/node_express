@@ -5,9 +5,9 @@
         <div class="col-12">
           <select class="form-select">
             <option selected></option>
-            <option value="1">노트북</option>
-            <option value="2">모니터</option>
-            <option value="3">마우스/키보드</option>
+            <option value="1">상의</option>
+            <option value="2">하의</option>
+            <option value="3">슈즈</option>
           </select>
         </div>
       </div>
@@ -24,7 +24,7 @@
               </p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group" role="group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">장바구니 담기</button>
+                  <button @click="goTOCart(product_id);" style="cursor:pointer" type="button" class="btn btn-sm btn-outline-secondary">장바구니 담기</button>
                   <button type="button" class="btn btn-sm btn-outline-secondary">주문하기</button>
                 </div>
                 <small class="text-dark">{{product.product_price}}원</small>
@@ -54,6 +54,9 @@ export default {
     },
     goToDetail(product_id) {
      this.$router.push({path:'/detail', query:{product_id:product_id}}); 
+    },
+    goTOCart(product_id) {
+      this.$router.push({path:'/cart', query:{product_id}});
     }
   }
 }

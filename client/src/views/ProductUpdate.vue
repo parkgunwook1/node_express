@@ -41,17 +41,17 @@
             <div class="row">
               <div class="col-auto">
                 <select class="form-select">
-                  <option>전자제품</option>
+                  <option>상의 </option>
                 </select>
               </div>
               <div class="col-auto">
                 <select class="form-select">
-                  <option>컴퓨터</option>
+                  <option>하의</option>
                 </select>
               </div>
               <div class="col-auto">
                 <select class="form-select">
-                  <option>악세사리</option>
+                  <option>슈즈</option>
                 </select>
               </div>
             </div>

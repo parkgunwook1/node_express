@@ -35,7 +35,7 @@ app.use(session({
     connectionLimit: 10,
     host: "localhost",
     user: "root",
-    password: "qkr2838"
+    password: "12345678"
   };
   
   const dbPool = require('mysql2').createPool(db);

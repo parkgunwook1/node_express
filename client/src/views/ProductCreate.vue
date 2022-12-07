@@ -1,7 +1,7 @@
 <template>
   <main class="mt-3">
     <div class="container">
-      <h2 class="text-center">제품 등록</h2>
+      <div class="text-center">Item-Register</div>
       <div class="mb-3 row">
         <label class="col-md-3 col-form-label">제품명</label>
         <div class="col-md-9">
@@ -74,10 +74,11 @@
       </div>
       <div class="mb-3 row">
         <div class="col-6 d-grid p-1">
-          <button type="button" class="btn btn-lg btn-dark" @click="goToList">취소하기</button>
+          <button type="button" class="btn btn-outline-dark" @click="goToList">취소하기</button>
         </div>
         <div class="col-6 d-grid p-1">
-          <button type="button" class="btn btn-lg btn-danger" @click="productInsert">저장하기</button>
+          <!-- <button type="button" class="btn btn-lg btn-dark" @click="productInsert">저장하기</button> -->
+          <button type="button" class="btn btn-outline-dark" @click="productInsert">저장하기</button>
         </div>
       </div>
     </div>
@@ -215,3 +216,29 @@ export default {
   }
 }
 </script>
+
+<style>
+@font-face {
+    font-family: 'MICEGothic Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-01@1.0/MICEGothic Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+.container {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.text-center {
+  font-family: 'MICEGothic Bold';
+  font-size: 2rem;
+}
+
+.mb-3 {
+  margin-top: 1.5rem;
+  font-family: 'MICEGothic Bold';
+}
+
+
+</style>
